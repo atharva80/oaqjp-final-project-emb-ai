@@ -3,7 +3,7 @@
 **Repository (fork):** https://github.com/atharva80/oaqjp-final-project-emb-ai
 **Forked from:** https://github.com/ibm-developer-skills-network/oaqjp-final-project-emb-ai
 
-> Q3, Q5, Q7, Q9, Q16 need real terminal output from the IBM lab (Watson only works there).
+> Q3, Q5, Q7, Q9 need real terminal output from the IBM lab (Watson only works there).
 > Each one lists the exact command to run in `/home/project/final_project` — paste the result under it.
 
 ---
@@ -240,7 +240,8 @@ Same code as Q13 (the final `server.py`, with module and function docstrings so 
 
 ## Q16 – Task 8b: `8b_static_code_analysis`
 ```
-/home/project/final_project$ pylint server.py
+$ pylint server.py
+
 ------------------------------------
 Your code has been rated at 10.00/10
 ```
