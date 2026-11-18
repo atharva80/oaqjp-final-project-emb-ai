@@ -3,10 +3,8 @@
 **Repository (fork):** https://github.com/atharva80/oaqjp-final-project-emb-ai
 **Forked from:** https://github.com/ibm-developer-skills-network/oaqjp-final-project-emb-ai
 
-> Terminal outputs (2b, 3b, 4b, 5b, 8b) and the two screenshots must come from the
-> IBM Skills Network lab, because the Watson NLP API only responds there and the graders
-> expect the `/home/project/final_project` path. Run `submission/generate_outputs.sh` in the
-> lab (steps at the bottom) and paste the files it creates.
+> Q3, Q5, Q7, Q9, Q16 need real terminal output from the IBM lab (Watson only works there).
+> Each one lists the exact command to run in `/home/project/final_project` — paste the result under it.
 
 ---
 
@@ -27,7 +25,16 @@ def emotion_detector(text_to_analyze):
 ```
 
 ## Q3 – Task 2b: `2b_application_creation`
-Paste `submission/2b_application_creation` (generated in the lab).
+Run in lab (with the Q2 code saved as `emotion_detection.py`):
+```
+/home/project/final_project$ python3
+>>> from emotion_detection import emotion_detector
+>>> print(emotion_detector('I am really mad about this'))
+<PASTE OUTPUT>
+>>> exit()
+/home/project/final_project$ python3 test_emotion_detection.py
+<PASTE OUTPUT>
+```
 
 ## Q4 – Task 3a: `3a_output_formatting`
 ```python
@@ -60,13 +67,22 @@ def emotion_detector(text_to_analyze):
 ```
 
 ## Q5 – Task 3b: `3b_formatted_output_test`
-Paste `submission/3b_formatted_output_test` (generated in the lab).
+```
+/home/project/final_project$ python3
+>>> from emotion_detection import emotion_detector
+>>> print(emotion_detector('I love this new technology.'))
+<PASTE OUTPUT — dict with anger, disgust, fear, joy, sadness, dominant_emotion>
+>>> exit()
+```
 
 ## Q6 – Task 4a: `__init__.py` URL
 https://github.com/atharva80/oaqjp-final-project-emb-ai/blob/main/EmotionDetection/__init__.py
 
 ## Q7 – Task 4b: `4b_packaging_test`
-Paste `submission/4b_packaging_test` (generated in the lab).
+```
+/home/project/final_project$ python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am very angry'))"
+<PASTE OUTPUT — should end with 'dominant_emotion': 'anger'>
+```
 
 ## Q8 – Task 5a: `5a_unit_testing`
 ```python
@@ -99,8 +115,8 @@ if __name__ == "__main__":
 ```
 
 ## Q9 – Task 5b: `5b_unit_testing_result`
-Paste `submission/5b_unit_testing_result` (generated in the lab). Expected shape:
 ```
+/home/project/final_project$ python3 test_emotion_detection.py
 .
 ----------------------------------------------------------------------
 Ran 1 test in X.XXXs
@@ -223,22 +239,8 @@ Screenshot from the lab: leave the input **blank** → click **Run Sentiment Ana
 Same code as Q13 (the final `server.py`, with module and function docstrings so pylint scores 10/10).
 
 ## Q16 – Task 8b: `8b_static_code_analysis`
-Paste `submission/8b_static_code_analysis` (generated in the lab). Expected:
 ```
+/home/project/final_project$ pylint server.py
 ------------------------------------
 Your code has been rated at 10.00/10
 ```
-
----
-
-## How to generate the outputs and screenshots in the IBM lab
-
-```bash
-cd /home/project
-git clone https://github.com/atharva80/oaqjp-final-project-emb-ai.git final_project
-cd final_project
-bash submission/generate_outputs.sh      # creates 2b, 3b, 4b, 5b, 8b in submission/
-python3 server.py                        # then Skills Network → Launch Application → port 5000
-```
-1. Enter *"I think I am having fun"* → Run → screenshot → save as `6b_deployment_test.png`
-2. Clear the input → Run → screenshot → save as `7c_error_handling_interface.png`
