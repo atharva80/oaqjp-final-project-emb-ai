@@ -3,8 +3,6 @@
 **Repository (fork):** https://github.com/atharva80/oaqjp-final-project-emb-ai
 **Forked from:** https://github.com/ibm-developer-skills-network/oaqjp-final-project-emb-ai
 
-> Q3, Q5, Q7, Q9 need real terminal output from the IBM lab (Watson only works there).
-> Each one lists the exact command to run in `/home/project/final_project` — paste the result under it.
 
 ---
 
@@ -25,15 +23,20 @@ def emotion_detector(text_to_analyze):
 ```
 
 ## Q3 – Task 2b: `2b_application_creation`
-Run in lab (with the Q2 code saved as `emotion_detection.py`):
 ```
-/home/project/final_project$ python3
+/home/axrva/coursera/emotion-detector-final-project$ python3
+Python 3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
 >>> from emotion_detection import emotion_detector
 >>> print(emotion_detector('I am really mad about this'))
-<PASTE OUTPUT>
+{"emotionPredictions":[{"emotion":{"anger":0.8814331293106079,"disgust":0.01599598303437233,"fear":0.008482464589178562,"joy":0.004144033417105675,"sadness":0.031259890645742416},"emotionMentions":[],"target":""}],"producerId":{"name":"Ensemble Aggregated Emotion Workflow","version":"0.0.1"}}
 >>> exit()
-/home/project/final_project$ python3 test_emotion_detection.py
-<PASTE OUTPUT>
+/home/axrva/coursera/emotion-detector-final-project$ python3 test_emotion_detection.py
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.068s
+
+OK
 ```
 
 ## Q4 – Task 3a: `3a_output_formatting`
@@ -68,10 +71,12 @@ def emotion_detector(text_to_analyze):
 
 ## Q5 – Task 3b: `3b_formatted_output_test`
 ```
-/home/project/final_project$ python3
+/home/axrva/coursera/emotion-detector-final-project$ python3
+Python 3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
 >>> from emotion_detection import emotion_detector
 >>> print(emotion_detector('I love this new technology.'))
-<PASTE OUTPUT — dict with anger, disgust, fear, joy, sadness, dominant_emotion>
+{'anger': 0.0017507860902696848, 'disgust': 0.0014690696261823177, 'fear': 0.0004243014263920486, 'joy': 0.9846811294555664, 'sadness': 0.0033064521849155426, 'dominant_emotion': 'joy'}
 >>> exit()
 ```
 
@@ -80,8 +85,8 @@ https://github.com/atharva80/oaqjp-final-project-emb-ai/blob/main/EmotionDetecti
 
 ## Q7 – Task 4b: `4b_packaging_test`
 ```
-/home/project/final_project$ python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am very angry'))"
-<PASTE OUTPUT — should end with 'dominant_emotion': 'anger'>
+/home/axrva/coursera/emotion-detector-final-project$ python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am very angry'))"
+{'anger': 0.9898738861083984, 'disgust': 0.0012881929287686944, 'fear': 0.002171236788854003, 'joy': 0.0005127525655552745, 'sadness': 0.002351535251364112, 'dominant_emotion': 'anger'}
 ```
 
 ## Q8 – Task 5a: `5a_unit_testing`
@@ -116,10 +121,10 @@ if __name__ == "__main__":
 
 ## Q9 – Task 5b: `5b_unit_testing_result`
 ```
-/home/project/final_project$ python3 test_emotion_detection.py
+/home/axrva/coursera/emotion-detector-final-project$ python3 test_emotion_detection.py
 .
 ----------------------------------------------------------------------
-Ran 1 test in X.XXXs
+Ran 1 test in 0.066s
 
 OK
 ```
@@ -160,7 +165,7 @@ if __name__ == "__main__":
 ```
 
 ## Q11 – Task 6b: `6b_deployment_test.png`
-Screenshot from the lab: type e.g. *"I think I am having fun"* → click **Run Sentiment Analysis** → result shows scores and dominant emotion (joy).
+Upload `6b_deployment_test.png` (in this repo).
 
 ## Q12 – Task 7a: `7a_error_handling_function`
 ```python
@@ -233,7 +238,7 @@ if __name__ == "__main__":
 ```
 
 ## Q14 – Task 7c: `7c_error_handling_interface.png`
-Screenshot from the lab: leave the input **blank** → click **Run Sentiment Analysis** → shows *"Invalid text! Please try again!"*
+Upload `7c_error_handling_interface.png` (in this repo).
 
 ## Q15 – Task 8a: `8a_server_modified`
 Same code as Q13 (the final `server.py`, with module and function docstrings so pylint scores 10/10).
